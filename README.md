@@ -1,7 +1,7 @@
 # 🌐 Enderline
 
 - [Discord Server](https://discord.gg/3Ggh5rT8uK)
-- [Portfólio](https://enderline.netlify.app/)
+- [Portfolio](https://enderline.netlify.app/)
 
 ---
 
