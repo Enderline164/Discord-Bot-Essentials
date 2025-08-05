@@ -1,8 +1,7 @@
 # 🌐 Enderline
 
-- [Discord](https://discord.gg/3Ggh5rT8uK)
-- [Site da Comunidade](https://enders-realmcommunity.netlify.app/)
-- [Site do Projeto](https://enderline.netlify.app/)
+- [Discord Server](https://discord.gg/3Ggh5rT8uK)
+- [Portfólio](https://enderline.netlify.app/)
 
 ---
 
