@@ -2,7 +2,7 @@
 
 - [Discord Server](https://discord.gg/3Ggh5rT8uK)
 - [Portfolio](https://enderline.netlify.app/)
-- 
+
 ## 🇧🇷 
 
 ### 📌 O que é o Discord Bot Essentials?
