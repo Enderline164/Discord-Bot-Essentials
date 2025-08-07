@@ -3,7 +3,7 @@
 - [Discord Server](https://discord.gg/3Ggh5rT8uK)
 - [Portfolio](https://enderline.netlify.app/)
 
-![Banner](https://github.com/user-attachments/assets/9065b27d-8ab8-4b45-8f61-56ea090c09e3)
+![Banner (1)](https://github.com/user-attachments/assets/4eaddf87-f386-4217-ab1c-54186ef36acf)
 
 ## 🇧🇷 
 
