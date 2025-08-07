@@ -3,8 +3,6 @@
 - [Discord Server](https://discord.gg/3Ggh5rT8uK)
 - [Portfolio](https://enderline.netlify.app/)
 
-![]([https://github.com/user-attachments/assets/68af3450-a0c0-4ae0-9854-bad26cde41d4](https://raw.githubusercontent.com/Enderline164/Discord-Bot-Essentials/refs/heads/main/Banner.jpg))
-
 ## 🇧🇷 
 
 ### 📌 O que é o Discord Bot Essentials?
