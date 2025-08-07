@@ -1,6 +1,6 @@
 # 🌐 Enderline
 
-- [Discord Server](https://discord.gg/3Ggh5rT8uK)
+- [Discord Server](https://discord.gg/jPcjXZB7eX) 
 - [Portfolio](https://enderline.netlify.app/)
 
 ![Banner (1)](https://github.com/user-attachments/assets/4eaddf87-f386-4217-ab1c-54186ef36acf)
