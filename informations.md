@@ -23,6 +23,9 @@ Ideal para comunidades que querem mais interatividade e recompensas. Mais funcio
 
 ### 🛠️ Como configurar o bot
 
+0. **Pasta**
+Jogue a pasta Bot extraída para o Disco Local C: para funcionar.
+
 1. **Abra o arquivo `main.py`**  
    Use qualquer editor de texto (VS Code, Sublime Text, Notepad++, ou até o Bloco de Notas).
 
@@ -123,6 +126,9 @@ Perfect for communities that want to offer interactivity and rewards. More featu
 
 ### 🛠️ How to configure the bot
 
+0. **Folder**
+Drag the extracted Bot folder to Local Disk C: to make it work.
+
 1. **Open the file `main.py`**  
    Use any text editor (VS Code, Sublime Text, Notepad++, etc).
 
@@ -201,3 +207,4 @@ LOJA_DE_CARGOS = {
 
 5. **To shut down the bot properly:**  
    Press `CTRL + C` in the terminal and close the window.
+
