@@ -1,0 +1,157 @@
+Enderline :
+https://discord.gg/3Ggh5rT8uK
+https://enders-realmcommunity.netlify.app/
+https://enderline.netlify.app/
+
+🇧🇷 Guia: Como Usar o Discord Bot Essentials
+📌 O que é o Discord Bot Essentials?
+O Discord Bot Essentials é um bot pronto criado para ajudar desenvolvedores e donos de servidores a gerenciar um sistema de economia, cargos, recompensas diárias, promoções, rankings e muito mais. Ideal para comunidades que querem dar mais interatividade e recompensas aos seus membros, em breve terá mais funcionabilidades conforme as atualizações.
+
+🛠️ Como configurar o bot
+
+0. **Pasta**
+Jogue a pasta Bot no disco local C: para funcionar corretamente.
+
+Abra o arquivo main.py
+Use qualquer editor de texto (como VS Code, Sublime Text, Notepad++ ou até mesmo o Bloco de Notas) e abra o arquivo chamado main.py.
+
+Edite as configurações importantes
+
+Encontre esta linha:
+"GUILD_ID = SERVER_ID"
+Substitua SERVER_ID pelo ID do seu servidor do Discord.
+
+Exemplo:
+GUILD_ID = 123456789012345678
+
+Encontre esta linha:
+OWNER_ID = ID
+Substitua ID pelo seu ID de usuário no Discord.
+
+Exemplo:
+OWNER_ID = 987654321098765432
+
+🎁 Lootboxes e Promo Codes
+Se quiser adicionar novas recompensas na lootbox, basta copiar e colar uma linha da lista LOOT_REWARDS, ajustando os valores:
+
+LOOT_REWARDS = [
+    {"type": "coins", "amount": 300, "chance": 40},
+    {"type": "coins", "amount": 1000, "chance": 10},
+    {"type": "xp", "amount": 50, "chance": 30},
+    {"type": "xp", "amount": 150, "chance": 10},
+    {"type": "role", "role_name": "LootBox Winner", "duration_minutes": 60, "chance": 10}
+]
+E para criar um novo código promocional, edite o dicionário PROMO_CODES:
+
+PROMO_CODES = {
+    "BOASVINDAS": {"coins": 1500, "xp": 500},
+    "NATAL2025": {"coins": 2500, "xp": 1000}
+}
+🏪 Loja de Cargos
+Para adicionar cargos na loja:
+
+LOJA_DE_CARGOS = {
+    "✨：Vip": 11500,
+    "👑：Elite": 25000,
+}
+
+Obs: O nome do cargo que deseja botar na loja deve ser exatamente o nome do cargo.
+
+🚀 Como iniciar o bot com o Homebrew
+Abra o terminal do Homebrew
+Após configurar o main.py, abra o Homebrew Terminal.
+
+Digite 1 no teclado
+Isso abrirá a opção de inserir o token do bot.
+
+Cole o Token do seu Bot do Discord
+Vá na sua aplicação no Discord Developer Portal, copie o Token e cole no Homebrew.
+⚠️ NUNCA compartilhe esse token com ninguém!
+
+Digite 2 para iniciar o bot
+Pronto! Seu bot estará online no seu servidor.
+
+Para desligar o bot corretamente:
+Pressione CTRL + C no terminal e feche a janela.
+
+guide_text = """Enderline:
+https://discord.gg/3Ggh5rT8uK
+https://enders-realmcommunity.netlify.app/
+https://enderline.netlify.app/
+
+🇺🇸 Guide: How to Use Discord Bot Essentials
+
+📌 What is Discord Bot Essentials?
+Discord Bot Essentials is a ready-to-use bot created to help developers and server owners manage an economy system, roles shop, daily rewards, promotions, leaderboards, and much more. It's ideal for communities that want to offer interactivity and rewards to their members. More features will be added over time through updates.
+
+🛠️ How to configure the bot
+
+0. **Folder**
+Place the Bot folder in the local disk C: for it to function properly.
+
+Open the file main.py  
+Use any text editor (like VS Code, Sublime Text, Notepad++, or even Notepad) and open the file called main.py.
+
+Edit the important settings:
+
+Find this line:
+GUILD_ID = SERVER_ID  
+Replace SERVER_ID with your actual Discord server ID.
+
+Example:
+GUILD_ID = 123456789012345678
+
+Find this line:
+OWNER_ID = ID  
+Replace ID with your Discord user ID.
+
+Example:
+OWNER_ID = 987654321098765432
+
+🎁 Lootboxes and Promo Codes
+
+If you want to add new rewards to the lootbox, just copy and paste one line in the LOOT_REWARDS list and adjust the values:
+
+LOOT_REWARDS = [
+    {"type": "coins", "amount": 300, "chance": 40},
+    {"type": "coins", "amount": 1000, "chance": 10},
+    {"type": "xp", "amount": 50, "chance": 30},
+    {"type": "xp", "amount": 150, "chance": 10},
+    {"type": "role", "role_name": "LootBox Winner", "duration_minutes": 60, "chance": 10}
+]
+
+To create a new promo code, edit the PROMO_CODES dictionary:
+
+PROMO_CODES = {
+    "BOASVINDAS": {"coins": 1500, "xp": 500},
+    "NATAL2025": {"coins": 2500, "xp": 1000}
+}
+
+🏪 Role Shop
+
+To add roles to the shop:
+
+LOJA_DE_CARGOS = {
+    "✨：Vip": 11500,
+    "👑：Elite": 25000,
+}
+
+Note: The role name you add to the shop must match the exact name of the role in your server.
+
+🚀 How to start the bot with Homebrew
+
+Open the Homebrew terminal  
+After setting up main.py, open the Homebrew terminal.
+
+Press 1 on your keyboard  
+This will open the option to insert your bot token.
+
+Paste your Discord Bot Token  
+Go to your application in the Discord Developer Portal, copy the Token, and paste it into Homebrew.  
+⚠️ NEVER share this token with anyone!
+
+Press 2 to start the bot  
+Done! Your bot will be online in your server.
+
+To properly shut down the bot:  
+Press CTRL + C in the terminal and close the window.
