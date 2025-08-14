@@ -17,7 +17,7 @@ COIN_NAME = "Coins"
 BOAS_VINDAS_DM_ATIVA = True
 BOAS_VINDAS_PUBLICA_ATIVA = True
 
-Welcome_Channel = "Canal-De-Boas-Vindas"
+Welcome_Channel = "🏃・sprints"
 
 Mensagem_Publica = (
     "👋 Olá {mention}, seja muito bem-vindo(a) ao servidor **{server}**!\n"
@@ -61,7 +61,7 @@ class DiscordBotEssentials(discord.Client):
         self.tree = app_commands.CommandTree(self)
         self.data = {"users": {}, "daily_cooldown": {}, "transactions": []}
         self.load_data()
-
+ 
     def load_data(self):
         if os.path.exists(DATA_FILE):
             with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -83,11 +83,13 @@ class DiscordBotEssentials(discord.Client):
 
     async def setup_hook(self):
         await self.tree.sync()
-        print("Comandos sincronizados com sucesso!")
+        print("Commands synchronized successfully!")
 
     async def on_ready(self):
-        print(f"O Bot {self.user} foi ligado com sucesso.")
+        print(f"The bot {self.user} was successfully connected.")
         await self.change_presence(activity=discord.Game(name="Minecraft"))
+
+    print("To turn off the bot use CTRL + C.")
 
     def log_transaction(self, from_user, to_user, trans_type, amount, description=""):
         transaction = {
@@ -180,11 +182,12 @@ class DiscordBotEssentials(discord.Client):
 
     async def on_ready(self):
         print(f"O Bot {self.user} foi ligado com sucesso.")
+        print("Para desligar o bot, use CRTL + C, e digite S, e clique enter.")
         await self.change_presence(activity=discord.Game(name="Minecraft"))
 
 intents = discord.Intents.default()
 intents.members = True
-
+intents.message_content = True
 bot = DiscordBotEssentials()
 client = DiscordBotEssentials()
 
@@ -223,6 +226,39 @@ async def on_member_join(member: discord.Member):
             await member.send(Mensagem_DM.format(name=member.name))
         except Exception as e:
             print(f"❌ Não consegui enviar DM para {member.name}: {e}")
+
+@bot.tree.command(name="lock", description="Trava o canal para que ninguém envie mensagens.")
+@app_commands.checks.has_permissions(manage_channels=True)
+async def lock(interaction: discord.Interaction):
+    channel = interaction.channel
+    overwrite = channel.overwrites_for(interaction.guild.default_role)
+    overwrite.send_messages = False
+    await channel.set_permissions(interaction.guild.default_role, overwrite=overwrite)
+    await interaction.response.send_message(
+        f"🔒 Canal {channel.mention} foi **travado** para @everyone.",
+        ephemeral=False
+    )
+
+@bot.tree.command(name="unlock", description="Destrava o canal e permite que enviem mensagens.")
+@app_commands.checks.has_permissions(manage_channels=True)
+async def unlock(interaction: discord.Interaction):
+    channel = interaction.channel
+    overwrite = channel.overwrites_for(interaction.guild.default_role)
+    overwrite.send_messages = True
+    await channel.set_permissions(interaction.guild.default_role, overwrite=overwrite)
+    await interaction.response.send_message(
+        f"🔓 Canal {channel.mention} foi **destravado** para @everyone.",
+        ephemeral=False
+    )
+
+@lock.error
+@unlock.error
+async def perms_error(interaction: discord.Interaction, error):
+    if isinstance(error, app_commands.MissingPermissions):
+        await interaction.response.send_message(
+            "❌ Você não tem permissão para usar este comando.",
+            ephemeral=True
+        )
 
 @bot.tree.command(name="avatar", description="Mostra o avatar de um usuário")
 @app_commands.describe(membro="Usuário para ver o avatar (opcional)")
